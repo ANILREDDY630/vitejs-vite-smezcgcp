@@ -1,23 +1,10 @@
-// src/components/MovieCard.jsx
-
-import React from 'react';
-import './MovieCard.css'; // Optional: Import CSS for styling
-
-const MovieCard = ({ movie }) => {
-  const { title, director, genre, releaseYear, synopsis, posterUrl } = movie;
-
+function MovieCard({ title, director }) {
   return (
-    <div className="movie-card">
-      <img src={posterUrl} alt={`${title} Poster`} className="movie-poster" />
-      <div className="movie-details">
-        <h2 className="movie-title">{title}</h2>
-        <p><strong>Director:</strong> {director}</p>
-        <p><strong>Genre:</strong> {genre}</p>
-        <p><strong>Release Year:</strong> {releaseYear}</p>
-        <p className="movie-synopsis">{synopsis}</p>
-      </div>
+    <div className="border p-4 rounded shadow">
+      <h3 className="font-bold">{title}</h3>
+      <p className="text-gray-600">Directed by {director}</p>
     </div>
   );
-};
+}
 
 export default MovieCard;
